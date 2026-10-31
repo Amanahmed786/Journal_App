@@ -23,8 +23,11 @@ import org.springframework.kafka.support.serializer.JsonDeserializer;
 import org.springframework.kafka.support.serializer.JsonSerializer;
 
 import java.io.File;
+import java.io.InputStream;
 import java.net.URL;
+import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.nio.file.StandardCopyOption;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -57,21 +60,17 @@ public class KafkaConfig {
         props.put(SaslConfigs.SASL_MECHANISM, "PLAIN");
         props.put(SaslConfigs.SASL_JAAS_CONFIG, saslJaasConfig);
 
-        // Resolve classpath resource to absolute path for the native Kafka SSL engine
-        try {
-            URL resource = getClass().getClassLoader().getResource("client.truststore.jks");
-            if (resource == null) {
+        // Extract truststore from classpath/JAR to a temporary file for Kafka SSL engine
+        try (InputStream is = getClass().getClassLoader().getResourceAsStream("client.truststore.jks")) {
+            if (is == null) {
                 throw new RuntimeException("Could not locate client.truststore.jks on classpath");
             }
-            String truststorePath;
-            try {
-                truststorePath = Paths.get(resource.toURI()).toFile().getAbsolutePath();
-            } catch (Exception ex) {
-                truststorePath = new File(resource.getPath()).getAbsolutePath();
-            }
-            props.put(SslConfigs.SSL_TRUSTSTORE_LOCATION_CONFIG, truststorePath);
+            File tempFile = File.createTempFile("client-truststore-", ".jks");
+            tempFile.deleteOnExit();
+            Files.copy(is, tempFile.toPath(), StandardCopyOption.REPLACE_EXISTING);
+            props.put(SslConfigs.SSL_TRUSTSTORE_LOCATION_CONFIG, tempFile.getAbsolutePath());
         } catch (Exception e) {
-            throw new RuntimeException("Could not locate client.truststore.jks on classpath", e);
+            throw new RuntimeException("Failed to extract client.truststore.jks for Kafka SSL", e);
         }
         props.put(SslConfigs.SSL_TRUSTSTORE_PASSWORD_CONFIG, trustStorePassword);
         return props;
