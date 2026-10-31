@@ -68,6 +68,7 @@ Keep sensitive credentials outside version control. Use environment variables or
 
 - GitHub: [Amanahmed786](https://github.com/Amanahmed786)
 - LinkedIn: [Connect with me](https://www.linkedin.com/in/aman-ahmed-/)
+- Live Project: https://journal-app-0ktk.onrender.com/
 
 ---
 
