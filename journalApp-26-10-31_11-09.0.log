@@ -1,0 +1,158 @@
+26-10-31 11:09:47.662 [main] INFO  Journal.App.JournalApplication - Starting JournalApplication using Java 17.0.12 with PID 6220 (C:\Users\hp\OneDrive\Desktop\Journal_App\target\classes started by hp in C:\Users\hp\OneDrive\Desktop\Journal_App) 
+26-10-31 11:09:47.666 [main] DEBUG Journal.App.JournalApplication - Running with Spring Boot v4.0.7, Spring v7.0.8 
+26-10-31 11:09:47.667 [main] INFO  Journal.App.JournalApplication - The following 1 profile is active: "dev" 
+26-10-31 11:09:47.917 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 9.0.1.Final 
+26-10-31 11:09:48.537 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode 
+26-10-31 11:09:48.539 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode. 
+26-10-31 11:09:48.741 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 193 ms. Found 3 MongoDB repository interfaces. 
+26-10-31 11:09:48.803 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode 
+26-10-31 11:09:48.804 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode. 
+26-10-31 11:09:48.827 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface Journal.App.Repository.ConfigJournalAppRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository 
+26-10-31 11:09:48.828 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface Journal.App.Repository.JornalEntryRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository 
+26-10-31 11:09:48.829 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface Journal.App.Repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository 
+26-10-31 11:09:48.829 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaces. 
+26-10-31 11:09:49.644 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http) 
+26-10-31 11:09:49.663 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"] 
+26-10-31 11:09:49.666 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat] 
+26-10-31 11:09:49.667 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.22] 
+26-10-31 11:09:49.771 [main] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 2029 ms 
+26-10-31 11:09:49.956 [main] INFO  org.mongodb.driver.cluster - Adding discovered server ac-0rxcspq-shard-00-00.us7dexj.mongodb.net:27017 to client view of cluster 
+26-10-31 11:09:49.988 [main] INFO  org.mongodb.driver.cluster - Adding discovered server ac-0rxcspq-shard-00-01.us7dexj.mongodb.net:27017 to client view of cluster 
+26-10-31 11:09:49.990 [main] INFO  org.mongodb.driver.cluster - Adding discovered server ac-0rxcspq-shard-00-02.us7dexj.mongodb.net:27017 to client view of cluster 
+26-10-31 11:09:50.038 [main] INFO  org.mongodb.driver.client - MongoClient with metadata {"application": {"name": "Cluster0"}, "driver": {"name": "mongo-java-driver|spring-boot|sync", "version": "5.6.5"}, "os": {"type": "Windows", "name": "Windows 11", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/17.0.12+8-LTS-286"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=MongoCredential{mechanism=null, userName='amanahmed42001_db_user', source='admin', password=<hidden>, mechanismProperties=<hidden>}, transportSettings=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@5f6494c0, com.mongodb.Jep395RecordCodecProvider@6826b70f, com.mongodb.KotlinCodecProvider@4df7d9ee, EnumCodecProvider{}]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[ac-0rxcspq-shard-00-00.us7dexj.mongodb.net:27017, ac-0rxcspq-shard-00-01.us7dexj.mongodb.net:27017, ac-0rxcspq-shard-00-02.us7dexj.mongodb.net:27017], srvServiceName=mongodb, mode=MULTIPLE, requiredClusterType=REPLICA_SET, requiredReplicaSetName='atlas-4bh4d7-shard-0', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverMonitoringMode=AUTO, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=true, invalidHostNameAllowed=false, context=null}, applicationName='Cluster0', compressorList=[], uuidRepresentation=UNSPECIFIED, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null, timeoutMS=null} 
+26-10-31 11:09:50.395 [main] INFO  org.mongodb.driver.cluster - Waiting for server to become available for operation createIndexes with ID 5. Remaining time: 29986 ms. Selector: WritableServerSelector, topology description: {type=REPLICA_SET, servers=[{address=ac-0rxcspq-shard-00-00.us7dexj.mongodb.net:27017, type=UNKNOWN, state=CONNECTING}, {address=ac-0rxcspq-shard-00-01.us7dexj.mongodb.net:27017, type=UNKNOWN, state=CONNECTING}, {address=ac-0rxcspq-shard-00-02.us7dexj.mongodb.net:27017, type=UNKNOWN, state=CONNECTING}]. 
+26-10-31 11:09:50.995 [cluster-ClusterId{value='6ae57f259849152160bf6053', description='Cluster0'}-ac-0rxcspq-shard-00-01.us7dexj.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=ac-0rxcspq-shard-00-01.us7dexj.mongodb.net:27017, type=REPLICA_SET_SECONDARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=433069900, minRoundTripTimeNanos=0, setName='atlas-4bh4d7-shard-0', canonicalAddress=ac-0rxcspq-shard-00-01.us7dexj.mongodb.net:27017, hosts=[ac-0rxcspq-shard-00-00.us7dexj.mongodb.net:27017, ac-0rxcspq-shard-00-02.us7dexj.mongodb.net:27017, ac-0rxcspq-shard-00-01.us7dexj.mongodb.net:27017], passives=[], arbiters=[], primary='ac-0rxcspq-shard-00-02.us7dexj.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='aps1-az3'}, Tag{name='cacheState', value='READY'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='AP_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=68, topologyVersion=TopologyVersion{processId=6ae4def0ff0d970f8f409919, counter=3}, lastWriteDate=Sat Oct 31 11:09:49 IST 2026, lastUpdateTimeNanos=2757036811000} 
+26-10-31 11:09:50.995 [cluster-ClusterId{value='6ae57f259849152160bf6053', description='Cluster0'}-ac-0rxcspq-shard-00-02.us7dexj.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=ac-0rxcspq-shard-00-02.us7dexj.mongodb.net:27017, type=REPLICA_SET_PRIMARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=433070000, minRoundTripTimeNanos=0, setName='atlas-4bh4d7-shard-0', canonicalAddress=ac-0rxcspq-shard-00-02.us7dexj.mongodb.net:27017, hosts=[ac-0rxcspq-shard-00-00.us7dexj.mongodb.net:27017, ac-0rxcspq-shard-00-02.us7dexj.mongodb.net:27017, ac-0rxcspq-shard-00-01.us7dexj.mongodb.net:27017], passives=[], arbiters=[], primary='ac-0rxcspq-shard-00-02.us7dexj.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='aps1-az2'}, Tag{name='cacheState', value='READY'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='AP_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=7fffffff0000000000000067, setVersion=68, topologyVersion=TopologyVersion{processId=6ae4de90c9d8b871b9af75c4, counter=6}, lastWriteDate=Sat Oct 31 11:09:49 IST 2026, lastUpdateTimeNanos=2757036811200} 
+26-10-31 11:09:50.995 [cluster-ClusterId{value='6ae57f259849152160bf6053', description='Cluster0'}-ac-0rxcspq-shard-00-00.us7dexj.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=ac-0rxcspq-shard-00-00.us7dexj.mongodb.net:27017, type=REPLICA_SET_SECONDARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=433068100, minRoundTripTimeNanos=0, setName='atlas-4bh4d7-shard-0', canonicalAddress=ac-0rxcspq-shard-00-00.us7dexj.mongodb.net:27017, hosts=[ac-0rxcspq-shard-00-00.us7dexj.mongodb.net:27017, ac-0rxcspq-shard-00-02.us7dexj.mongodb.net:27017, ac-0rxcspq-shard-00-01.us7dexj.mongodb.net:27017], passives=[], arbiters=[], primary='ac-0rxcspq-shard-00-02.us7dexj.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='aps1-az1'}, Tag{name='cacheState', value='READY'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='AP_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=68, topologyVersion=TopologyVersion{processId=6ae4de2f5b39c7c78d4ab096, counter=4}, lastWriteDate=Sat Oct 31 11:09:49 IST 2026, lastUpdateTimeNanos=2757036811200} 
+26-10-31 11:09:51.011 [cluster-ClusterId{value='6ae57f259849152160bf6053', description='Cluster0'}-ac-0rxcspq-shard-00-02.us7dexj.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Discovered replica set primary ac-0rxcspq-shard-00-02.us7dexj.mongodb.net:27017 with max election id 7fffffff0000000000000067 and max set version 68 
+26-10-31 11:09:53.135 [main] INFO  o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider 
+26-10-31 11:09:53.136 [main] WARN  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR 
+26-10-31 11:09:53.472 [main] INFO  o.s.b.w.a.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html] 
+26-10-31 11:09:53.811 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"] 
+26-10-31 11:09:53.837 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path '/' 
+26-10-31 11:09:53.897 [main] INFO  o.a.k.common.config.AbstractConfig - ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = earliest
+	bootstrap.servers = [kafka-3a76400d-amanahmed42001-e1ae.l.aivencloud.com:21291]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-weekly-sentiment-group-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = weekly-sentiment-group
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metadata.recovery.rebootstrap.trigger.ms = 300000
+	metadata.recovery.strategy = rebootstrap
+	metric.reporters = [org.apache.kafka.common.metrics.JmxReporter]
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = [hidden]
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = PLAIN
+	sasl.oauthbearer.assertion.algorithm = RS256
+	sasl.oauthbearer.assertion.claim.aud = null
+	sasl.oauthbearer.assertion.claim.exp.seconds = 300
+	sasl.oauthbearer.assertion.claim.iss = null
+	sasl.oauthbearer.assertion.claim.jti.include = false
+	sasl.oauthbearer.assertion.claim.nbf.seconds = 60
+	sasl.oauthbearer.assertion.claim.sub = null
+	sasl.oauthbearer.assertion.file = null
+	sasl.oauthbearer.assertion.private.key.file = null
+	sasl.oauthbearer.assertion.private.key.passphrase = null
+	sasl.oauthbearer.assertion.template.file = null
+	sasl.oauthbearer.client.credentials.client.id = null
+	sasl.oauthbearer.client.credentials.client.secret = null
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.jwt.retriever.class = class org.apache.kafka.common.security.oauthbearer.DefaultJwtRetriever
+	sasl.oauthbearer.jwt.validator.class = class org.apache.kafka.common.security.oauthbearer.DefaultJwtValidator
+	sasl.oauthbearer.scope = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = SASL_SSL
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	share.acknowledgement.mode = implicit
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = C:\Users\hp\OneDrive\Desktop\Journal_App\target\classes\client.truststore.jks
+	ssl.truststore.password = [hidden]
+	ssl.truststore.type = JKS
+	value.deserializer = class org.springframework.kafka.support.serializer.ErrorHandlingDeserializer
+ 
+26-10-31 11:09:53.953 [main] INFO  o.a.k.c.t.i.KafkaMetricsCollector - initializing Kafka metrics collector 
+26-10-31 11:09:54.258 [main] INFO  o.a.k.c.s.a.AbstractLogin - Successfully logged in. 
+26-10-31 11:09:54.389 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 4.1.2 
+26-10-31 11:09:54.390 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: c82fd9b934b4c1e6 
+26-10-31 11:09:54.390 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1793425194387 
+26-10-31 11:09:54.396 [main] INFO  o.a.k.c.c.i.ClassicKafkaConsumer - [Consumer clientId=consumer-weekly-sentiment-group-1, groupId=weekly-sentiment-group] Subscribed to topic(s): weekly_sentiments 
+26-10-31 11:09:54.419 [main] INFO  Journal.App.JournalApplication - Started JournalApplication in 7.306 seconds (process running for 8.128) 
+26-10-31 11:09:55.878 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.Metadata - [Consumer clientId=consumer-weekly-sentiment-group-1, groupId=weekly-sentiment-group] Cluster ID: d627d45f-a70e-43a9-372c-aa0601654956 
+26-10-31 11:09:55.884 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-weekly-sentiment-group-1, groupId=weekly-sentiment-group] Discovered group coordinator 168.144.17.41:21291 (id: 2147483645 rack: null isFenced: false) 
