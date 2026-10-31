@@ -59,9 +59,8 @@ Keep sensitive credentials outside version control. Use environment variables or
 
 ## 🗺️ Upcoming Enhancements
 
-- Redis caching
-- Kafka-based event handling
 - VPS deployment with Nginx and SSL
+- integration of Some AI features
 
 ## 👨‍💻 Author
 
