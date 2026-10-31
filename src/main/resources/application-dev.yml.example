@@ -1,0 +1,59 @@
+# Sample development configuration template
+# Copy this file to application-dev.yml for your local environment
+spring:
+  mongodb:
+    uri: "mongodb://<username>:<password>@cluster0.mongodb.net/journaldb"
+  data:
+    mongodb:
+      auto-index-creation: true
+    redis:
+      host: <your-redis-host>
+      port: 6379
+      username: default
+      password: <your-redis-password>
+      ssl:
+        enabled: false
+  
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: <your-email>@gmail.com
+    password: <your-google-app-password>
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
+  kafka:
+    bootstrap-servers: <your-kafka-broker>:<port>
+    properties:
+      security.protocol: SASL_SSL
+      sasl.mechanism: PLAIN
+      sasl.jaas.config: org.apache.kafka.common.security.plain.PlainLoginModule required username="<kafka-user>" password="<kafka-password>";
+    ssl:
+      trust-store-location: classpath:client.truststore.jks
+      trust-store-password: changeit
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+    consumer:
+      group-id: weekly-sentiment-group
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      properties:
+        spring.json.trusted.packages: "*"
+
+server:
+  port: 8081
+
+logging:
+  level:
+    root: INFO
+    Journal.App: DEBUG
+
+weather:
+  api:
+    key: "<your-weather-api-key>"

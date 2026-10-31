@@ -1,0 +1,24 @@
+{
+  "rewrites": [
+    {
+      "source": "/public/:path*",
+      "destination": "https://BACKEND_URL_PLACEHOLDER/public/:path*"
+    },
+    {
+      "source": "/user/:path*",
+      "destination": "https://BACKEND_URL_PLACEHOLDER/user/:path*"
+    },
+    {
+      "source": "/Journal/:path*",
+      "destination": "https://BACKEND_URL_PLACEHOLDER/Journal/:path*"
+    },
+    {
+      "source": "/health-check",
+      "destination": "https://BACKEND_URL_PLACEHOLDER/health-check"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
